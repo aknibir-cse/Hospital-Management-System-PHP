@@ -122,24 +122,25 @@ if($rs['bill_type']  == "Prescription charge")
     <table class="table table-bordered table-striped">
       <tbody>
         <tr>
-          <th scope="col"><div align="right">Bill Amount &nbsp; </div></th>
-          <td>&nbsp;<?php echo $billamt; ?> ৳</td>
+          <th scope="col"><div align="right">Bill Amount &nbsp;</div></th>
+          <td>&nbsp;<?php echo $billamt; ?>&nbsp;৳</td>
         </tr>
         <tr>
-          <th width="442" scope="col"><div align="right">Tax Amount (5%) &nbsp; </div></th>
-          	<td width="95">&nbsp;<?php echo $taxamt = 5 * ($billamt / 100); ?> 
+          <th width="442" scope="col"><div align="right">Tax Amount (5%) &nbsp;</div></th>
+          	<td width="95">&nbsp;<?php echo $taxamt = 5 * ($billamt / 100); ?>&nbsp;
 			<span style="color: orange;">৳</span>
             </td>
         </tr>
          
 		<tr>
-		  <th scope="col"><div align="right">Discount &nbsp; </div></th>
-		  <td>&nbsp;<?php echo $rsbilling_records['discount']; ?> <span style="color: violet;">৳</span></td>
+		  <th scope="col"><div align="right">Discount &nbsp;</div></th>
+		  <td>&nbsp;<?php echo $rsbilling_records['discount']; ?>&nbsp;
+		  <span style="color: violet;">৳</span></td>
 	    </tr>
         
 		<tr>
-		  <th scope="col"><div align="right">Grand Total &nbsp; </div></th>
-		  <td>&nbsp;<?php echo ($billamt + $taxamt)  - $rsbilling_records['discount'] ; ?> 
+		  <th scope="col"><div align="right">Grand Total &nbsp;</div></th>
+		  <td>&nbsp;<?php echo ($billamt + $taxamt)  - $rsbilling_records['discount'] ; ?>&nbsp;
 		  <span style="color: green;">৳</span></td>
 	    </tr>
       </tbody>

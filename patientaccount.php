@@ -20,9 +20,6 @@ $rspatientappointment = mysqli_fetch_array($qsqlpatientappointment);
         <h2>Dashboard</h2>
     </div>
 
-
-
-
     <div class="card">
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -60,7 +57,7 @@ $rspatientappointment = mysqli_fetch_array($qsqlpatientappointment);
                         if(mysqli_num_rows($qsqlpatientappointment) == 0)
                         {
                             ?>
-                        <h3>Appointment records not found.. </h3>
+                        <h3>Appointment Records not found.</h3>
                         <?php
                         }
                         else

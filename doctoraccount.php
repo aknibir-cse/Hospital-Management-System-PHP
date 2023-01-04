@@ -83,7 +83,7 @@ if(!isset($_SESSION['doctorid']))
               { 
                echo $row['total'];
              }
-              ?> <span style="color: green;">৳</span>
+              ?>&nbsp;<span style="color: green;">৳</span>
 
             </div>
           </div>

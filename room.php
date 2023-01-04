@@ -45,7 +45,7 @@ if(isset($_GET['editid']))
 </div>
 <div class="wrapper col4">
   <div id="container">
-    <h1>Add new Room details record</h1>
+    <h1>Add new Room details Record</h1>
     <form method="post" action="" name="frmroom" onSubmit="return validateform()">
 
     <table width="200" border="3">
@@ -76,7 +76,7 @@ if(isset($_GET['editid']))
           <td><input type="text" name="roomnumber" id="roomnumber"  value="<?php echo $rsedit['roomno']; ?>"/></td>
         </tr>
         <tr>
-          <td>Number of beds</td>
+          <td>Number of Beds</td>
           <td><input type="text" name="numberofbeds" id="numberofbeds"  value="<?php echo $rsedit['noofbeds']; ?>"/></td>
         </tr>
         <tr>
@@ -131,37 +131,37 @@ function validateform()
 {
 	if(document.frmroom.select2.value == "")
 	{
-		alert("Room type should not be empty..");
+		alert("Room type should not be empty.");
 		document.frmroom.select2.focus();
 		return false;
 	}
 	else if(document.frmroom.roomnumber.value == "")
 	{
-		alert("Room number should not be empty..");
+		alert("Room number should not be empty.");
 		document.frmroom.roomnumber.focus();
 		return false;
 	}
 	else if(!document.frmroom.roomnumber.value.match(numericExpression))
 	{
-		alert("Room number not valid..");
+		alert("Room number not valid.");
 		document.frmroom.roomnumber.focus();
 		return false;
 	}
 	else if(document.frmroom.numberofbeds.value == "")
 	{
-		alert("Number of beds should not be empty..");
+		alert("Number of beds should not be empty.");
 		document.frmroom.numberofbeds.focus();
 		return false;
 	}
 	else if(!document.frmroom.numberofbeds.value.match(numericExpression))
 	{
-		alert("Number of beds not valid..");
+		alert("Number of beds not valid.");
 		document.frmroom.numberofbeds.focus();
 		return false;
 	}
 	else if(document.frmroom.select.value == "" )
 	{
-		alert("Kindly select the status..");
+		alert("Kindly select the status.");
 		document.frmroom.select.focus();
 		return false;
 	}

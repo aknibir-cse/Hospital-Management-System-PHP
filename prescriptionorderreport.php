@@ -7,7 +7,7 @@ if(isset($_GET['delid']))
 	$qsql=mysqli_query($con,$sql);
 	if(mysqli_affected_rows($con) == 1)
 	{
-		echo "<script>alert('prescription deleted successfully..');</script>";
+		echo "<script>alert('Prescription Deleted Successfully.');</script>";
 	}
 }
 if(isset($_POST['submit']))
@@ -17,7 +17,7 @@ if(isset($_POST['submit']))
 			$sql ="UPDATE prescription_records SET prescription_id='$_POST[prescriptionid]',medicine_name='$_POST[medicine]',cost='$_POST[cost]',unit='$_POST[unit]',dosage='$_POST[select2]',status=' $_POST[select]' WHERE prescription_record_id='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('prescription record updated successfully...');</script>";
+			echo "<script>alert('Prescription Record Updated Successfully.');</script>";
 		}
 		else
 		{
@@ -31,7 +31,7 @@ if(isset($_POST['submit']))
 		{	
 			$billtype = "Prescription update";
 			$prescriptionid= $_POST['prescriptionid'];
-			echo "<script>alert('prescription record inserted successfully...');</script>";
+			echo "<script>alert('Prescription Record Inserted Successfully.');</script>";
 		}
 		else
 		{
@@ -90,7 +90,7 @@ if(isset($_GET['editid']))
       </tbody>
     </table>
     
-  <h1>View Prescription record</h1>
+  <h1>View Prescription Record</h1>
     <table width="200" border="3">
       <tbody>
         <tr>
@@ -114,9 +114,9 @@ if(isset($_GET['editid']))
 		{
         echo "<tr>
           <td>&nbsp;$rs[medicine_name]</td>
-          <td>&nbsp;Rs. $rs[cost]</td>
-		   <td>&nbsp;$rs[unit]</td>
-		    <td>&nbsp;$rs[dosage]</td>";
+          <td>&nbsp;$rs[cost]&nbsp;৳</td>
+		  <td>&nbsp;$rs[unit]</td>
+		  <td>&nbsp;$rs[dosage]</td>";
 			if(!isset($_SESSION['patientid']))
 			{
 			 echo " <td>&nbsp; <a href='prescriptionrecord.php?delid=$rs[prescription_record_id]&prescriptionid=$_GET[prescriptionid]'>Delete</a> </td>"; 

@@ -244,8 +244,6 @@ $tim = date("H:i:s");
                     </li>
                 </ul>
                 </li>
-
-
                 </ul>
             </div>
 

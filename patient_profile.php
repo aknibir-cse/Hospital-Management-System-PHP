@@ -166,9 +166,6 @@ label.form-label {
 		</div>
 
 	</div>
-<div class="copyright">
-		<p>© 2017 Appoint My Doctor Form. All rights reserved | Design by <a href="www.w3layouts.com">W3layouts</a></p> 
-	</div>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script>
 

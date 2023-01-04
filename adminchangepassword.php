@@ -1,5 +1,4 @@
 <?php
-
 include("adheader.php");
 include("dbconnection.php");
 session_start();

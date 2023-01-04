@@ -50,7 +50,7 @@ if(isset($_GET['delid']))
 					<td>&nbsp;$rs[mobileno]</td>
 					<td>&nbsp;$rsdept[departmentname]</td>
 					<td>&nbsp;$rs[loginid]</td>
-					<td>&nbsp;$rs[consultancy_charge] ৳</td>
+					<td>&nbsp;$rs[consultancy_charge]&nbsp;৳</td>
 					<td>&nbsp;$rs[education]</td>
 					<td>&nbsp;$rs[experience] year</td>
 					<td>$rs[status]</td>

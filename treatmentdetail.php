@@ -40,8 +40,8 @@ if(file_exists("treatmentfiles/$rs[uploads]"))
 		echo "<br><a href='treatmentfiles/$rs[uploads]'>Download</a>";
 	}
 }
-					echo "</td>";
-			echo "<td>$$rs[treatment_cost] ৳</td></tr>";
+			echo "</td>";
+			echo "<td>&nbsp;$rs[treatment_cost]&nbsp;৳</td></tr>";
 		}
 		?>
 </table>

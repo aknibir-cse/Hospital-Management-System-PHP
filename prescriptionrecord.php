@@ -64,7 +64,8 @@ if(isset($_GET['editid']))
           <td><strong>Prescription Date</strong></td>
           <td><strong>Status</strong></td>
         </tr>
-          <?php
+
+        <?php
 		$sql ="SELECT * FROM prescription WHERE prescriptionid='$_GET[prescriptionid]'";
 		$qsql = mysqli_query($con,$sql);
 		while($rs = mysqli_fetch_array($qsql))
@@ -112,7 +113,8 @@ if(isset($_GET['editid']))
 		$qsqlmedicine = mysqli_query($con,$sqlmedicine);
 		while($rsmedicine = mysqli_fetch_array($qsqlmedicine))
 		{
-			echo "<option value='$rsmedicine[medicineid]'>$rsmedicine[medicinename] ( $ $rsmedicine[medicinecost] )</option>";
+			echo "<option value='$rsmedicine[medicineid]'>$rsmedicine[medicinename] 
+			($rsmedicine[medicinecost]&nbsp;৳)</option>";
 		}
 		?>
 		  </select>
@@ -120,7 +122,7 @@ if(isset($_GET['editid']))
         </tr>
         <tr>
           <td>Cost</td>
-          <td><input class="form-control" type="text" name="cost" id="cost" value="<?php echo $rsmedicine['medicinecost']; ?>" readonly style="background-color:pink;" /></td>
+          <td><input class="form-control" type="text" name="cost" id="cost" value="<?php echo $rsmedicine['medicinecost']; ?>" readonly style="background-color:white;" /></td>
         </tr>
         <tr>
           <td>Unit</td>
@@ -128,7 +130,7 @@ if(isset($_GET['editid']))
         </tr>
         <tr>
           <td>Total Cost</td>
-          <td><input class="form-control" type="text" name="totcost" id="totcost" value="<?php echo $rsedit['cost']; ?>" readonly style="background-color:pink;" /></td>
+          <td><input class="form-control" type="text" name="totcost" id="totcost" value="<?php echo $rsedit['cost']; ?>" readonly style="background-color:white;" /></td>
         </tr>
         <tr>
           <td>Dosage</td>
@@ -157,8 +159,8 @@ if(isset($_GET['editid']))
     </table>
     </form>
     <?php
-			}
-		?>
+	}
+	?>
 	</div>
 	<div class="block-header"><h2>View Prescription record</h2></div>
     
@@ -171,10 +173,10 @@ if(isset($_GET['editid']))
           <td><strong>Cost</strong></td>
           <td><strong>Unit</strong></td>
           <td><strong>Total</strong></td>
-                    <?php
+        <?php
 			if(!isset($_SESSION['patientid']))
 			{
-		  ?>  
+		?>  
           <td><strong>Action</strong></td>
           <?php
 			}
@@ -191,7 +193,7 @@ if(isset($_GET['editid']))
 		    <td>&nbsp;$rs[dosage]</td>
           <td>&nbsp;$$rs[cost]</td>
 		   <td>&nbsp;$rs[unit]</td>
-		   <td >$" . $rs['cost'] * $rs['unit'] . "</td>";
+		   <td>&nbsp;". $rs['cost'] * $rs['unit'] ."&nbsp;৳</td>";
 			if(!isset($_SESSION['patientid']))
 			{
 			 echo " <td>&nbsp; <a href='prescriptionrecord.php?delid=$rs[prescription_record_id]&prescriptionid=$_GET[prescriptionid]'>Delete</a> </td>"; 

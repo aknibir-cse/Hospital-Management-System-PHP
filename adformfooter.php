@@ -12,9 +12,6 @@
 <script src="assets/js/pages/tables/jquery-datatable.js"></script>
 <script src="assets/js/pages/forms/editors.js"></script>
 
-
-
-
 </body>
 </body>
 </html>

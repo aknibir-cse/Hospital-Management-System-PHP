@@ -22,7 +22,7 @@ include("dbconnection.php");
     <div class="row clearfix">
         <div class="col-lg-3 col-md-3 col-sm-6">
             <div class="info-box-4 hover-zoom-effect">
-                <div class="icon"> <i class="zmdi zmdi-male-female col-blush"></i> </div>
+                <div class="icon"> <i class="zmdi zmdi-male-female col-blush"></i></div>
                 <div class="content">
                     <div class="text">Total Patient</div>
                     <div class="number">
@@ -78,7 +78,7 @@ include("dbconnection.php");
               { 
                echo $row['total']; 
              } 
-              ?> <span style="color: green;">৳</span>
+              ?>&nbsp;<span style="color: green;">৳</span>
                     </div>
                 </div>
             </div>

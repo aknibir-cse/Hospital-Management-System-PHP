@@ -127,7 +127,7 @@ if(isset($_SESSION['doctorid']))
 
                                     <input class="form-control" type="text" name="consultancy_charge"
                                         id="consultancy_charge" 
-                                        value="<?php echo $rsedit['consultancy_charge'];?> ৳" /> 
+                                        value="<?php echo $rsedit['consultancy_charge'];?>&nbsp;৳" /> 
                                 </div>
                             </div>
 
