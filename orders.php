@@ -49,7 +49,7 @@ if(isset($_GET['editid']))
 </div>
 <div class="wrapper col4">
   <div id="container">
-    <h1>Here you can order medicine's through online..</h1>
+    <h1>Here you can order Medicine's through Online.</h1>
       <form method="post" action="" name="frmorders" onSubmit="return validateform()">
     <table width="490" border="3">
       <tbody>

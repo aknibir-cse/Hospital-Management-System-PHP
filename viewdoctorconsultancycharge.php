@@ -25,7 +25,7 @@ if(isset($_GET['delid']))
 			<thead>
 				<tr>
 					<th width="97" scope="col">Date</th>
-					<th width="245" scope="col">Decription</th>
+					<th width="245" scope="col">Description</th>
 					<th width="86" scope="col">Bill Amount</th>
 				</tr>
 			</thead>
@@ -102,7 +102,8 @@ if(isset($_GET['delid']))
 				<tr>
 					<td></td>
 					<td>Total Earnings :</td>
-					<td>৳ <?php echo ($billamt + $taxamt)  - $rsbilling_records['discount'] ; ?></td>
+					<td><?php echo ($billamt + $taxamt)  - $rsbilling_records['discount'] ; ?> <span style="color: green;">৳</span>
+				</td>
 				</tr>
 			</tfoot>
 		</table>

@@ -5,11 +5,11 @@ include("dbconnection.php");
 		
 <table class="table table-bordered table-striped">
           <tr>
-            <td><strong>Treatment type</strong></td>
-            <td><strong>Treatment date & time</strong></td>
+            <td><strong>Treatment Type</strong></td>
+            <td><strong>Treatment Date & Time</strong></td>
             <td><strong>Doctor</strong></td>
             <td><strong>Treatment Description</strong></td>
-            <td><strong>Treatment cost</strong></td>
+            <td><strong>Treatment Cost</strong></td>
           </tr>
           <?php
 		 $sql ="SELECT * FROM treatment_records LEFT JOIN treatment ON treatment_records.treatmentid=treatment.treatmentid WHERE treatment_records.patientid='$_GET[patientid]' AND treatment_records.appointmentid='$_GET[appointmentid]'";
@@ -41,7 +41,7 @@ if(file_exists("treatmentfiles/$rs[uploads]"))
 	}
 }
 					echo "</td>";
-			echo "<td>$$rs[treatment_cost]</td></tr>";
+			echo "<td>$$rs[treatment_cost] ৳</td></tr>";
 		}
 		?>
 </table>
@@ -52,7 +52,7 @@ if(isset($_SESSION['doctorid']))
 <hr>
 	<table>
 	<tr>
-	<td><div align="center"><strong><a href="treatmentrecord.php?patientid=<?php echo $_GET['patientid']; ?>&appid=<?php echo $rsappointment['appointmentid']; ?>">Add Treatment records</a></strong></div></td>
+	<td><div align="center"><strong><a href="treatmentrecord.php?patientid=<?php echo $_GET['patientid']; ?>&appid=<?php echo $rsappointment['appointmentid']; ?>">Add Treatment Records</a></strong></div></td>
 	</tr>
 	</table>
 <?php

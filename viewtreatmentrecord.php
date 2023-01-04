@@ -14,7 +14,7 @@ if(isset($_GET['delid']))
 
 <div class="container-fluid">
   <div class="block-header">
-    <h2 class="text-center">View new treatment records</h2>
+    <h2 class="text-center">View new Treatment Records</h2>
 
   </div>
 
@@ -24,13 +24,12 @@ if(isset($_GET['delid']))
      <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
      	<thead>
      		 <tr>
-            <td width="71"	scope="col">Treatment type</td>
+            <td width="71"	scope="col">Treatment Type</td>
             <td width="52"	scope="col">Patient</td>
             <td width="78"	scope="col">Doctor</td>
             <td width="82"	scope="col">Treatment Description</td>
-            <td width="43"	scope="col">Treatment date</td>
-            <td width="43"	scope="col">Treatment time</td>
-     
+            <td width="43"	scope="col">Treatment Date</td>
+            <td width="43"	scope="col">Treatment Time</td>    
           </tr>
      	</thead>
         <tbody>
@@ -39,7 +38,7 @@ if(isset($_GET['delid']))
 		$sql ="SELECT * FROM treatment_records where status='Active'";
 		if(isset($_SESSION['patientid']))
 		{
-			$sql = $sql . " AND patientid='$_SESSION[patientid]'"; 
+			$sql = $sql . " AND patientid=$_SESSION[patientid]"; 
 		}
 		if(isset($_SESSION['doctorid']))
 		{
@@ -48,15 +47,15 @@ if(isset($_GET['delid']))
 		$qsql = mysqli_query($con,$sql);
 		while($rs = mysqli_fetch_array($qsql))
 		{
-			$sqlpat = "SELECT * FROM patient WHERE patientid='$rs[patientid]'";
+			$sqlpat = "SELECT * FROM patient WHERE patientid=$rs[patientid]";
 			$qsqlpat = mysqli_query($con,$sqlpat);
 			$rspat = mysqli_fetch_array($qsqlpat);
 			
-			$sqldoc= "SELECT * FROM doctor WHERE doctorid='$rs[doctorid]'";
+			$sqldoc= "SELECT * FROM doctor WHERE doctorid=$rs[doctorid]";
 			$qsqldoc = mysqli_query($con,$sqldoc);
 			$rsdoc = mysqli_fetch_array($qsqldoc);
 			
-			$sqltreatment= "SELECT * FROM treatment WHERE treatmentid='$rs[treatmentid]'";
+			$sqltreatment= "SELECT * FROM treatment WHERE treatmentid=$rs[treatmentid]";
 			$qsqltreatment = mysqli_query($con,$sqltreatment);
 			$rstreatment = mysqli_fetch_array($qsqltreatment);
 			
@@ -68,7 +67,7 @@ if(isset($_GET['delid']))
 			 <td>&nbsp;$rs[treatment_date]</td>
 			  <td>&nbsp;$rs[treatment_time]</td>";  
 	
-       echo " </tr>";
+       echo "<tr></tr>";
 		}
 		?>
         </tbody>

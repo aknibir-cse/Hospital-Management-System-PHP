@@ -50,7 +50,7 @@ if(isset($_GET['delid']))
 					<td>&nbsp;$rs[mobileno]</td>
 					<td>&nbsp;$rsdept[departmentname]</td>
 					<td>&nbsp;$rs[loginid]</td>
-					<td>&nbsp;$rs[consultancy_charge]</td>
+					<td>&nbsp;$rs[consultancy_charge] ৳</td>
 					<td>&nbsp;$rs[education]</td>
 					<td>&nbsp;$rs[experience] year</td>
 					<td>$rs[status]</td>
@@ -58,7 +58,8 @@ if(isset($_GET['delid']))
 					<a href='doctor.php?editid=$rs[doctorid]' class='btn btn-sm btn-raised g-bg-cyan'>Edit</a> <a href='viewdoctor.php?delid=$rs[doctorid]' class='btn btn-sm btn-raised g-bg-blush2'>Delete</a> </td>
 					</tr>";
 				}
-				?>      </tbody>
+				?>
+				</tbody>
 			</table>
 		</section>
 	</div>

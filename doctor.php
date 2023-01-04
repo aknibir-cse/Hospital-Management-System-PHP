@@ -46,10 +46,7 @@ if(isset($_GET['editid']))
 			<div class="card">
 
 
-				<form method="post" action="" name="frmdoct" onSubmit="return validateform()" style="padding: 10px">
-
-
-					
+				<form method="post" action="" name="frmdoct" onSubmit="return validateform()" style="padding: 10px">					
 					<div class="form-group"><label>Doctor Name</label> 
 					<div class="form-line">
 					<input class="form-control" type="text" name="doctorname" id="doctorname" value="<?php echo $rsedit['doctorname']; ?>" />
@@ -125,7 +122,7 @@ if(isset($_GET['editid']))
 
 					<div class="form-group"><label>Consultancy Charge</label> 
 					<div class="form-line">
-					<input class="form-control" type="text" name="consultancy_charge" id="consultancy_charge" value="<?php echo $rsedit['experience']; ?>"/>
+					<input class="form-control" type="text" name="consultancy_charge" id="consultancy_charge" value="<?php echo $rsedit['experience']; ?>" placeholder="৳"/> 
 				</div>
 				</div>
 

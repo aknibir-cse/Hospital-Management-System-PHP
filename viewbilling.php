@@ -23,7 +23,7 @@ $rsbilling_records = mysqli_fetch_array($qsqlbilling_records);
       <tbody>
         <tr>
           <th scope="col"><div align="right">Bill number &nbsp; </div></th>
-          <td> <?php echo '#HMS_'.$rsbilling_records['billingid']; ?></td>
+          <td> <?php echo '#HMS-'.$rsbilling_records['billingid']; ?></td>
         </tr>
         <tr>
           <th width="124" scope="col"><div align="right">Appointment Number &nbsp; </div></th>
@@ -123,22 +123,24 @@ if($rs['bill_type']  == "Prescription charge")
       <tbody>
         <tr>
           <th scope="col"><div align="right">Bill Amount &nbsp; </div></th>
-          <td>&nbsp;$ <?php echo $billamt; ?></td>
+          <td>&nbsp;<?php echo $billamt; ?> ৳</td>
         </tr>
         <tr>
           <th width="442" scope="col"><div align="right">Tax Amount (5%) &nbsp; </div></th>
-          	<td width="95">&nbsp;$ <?php echo $taxamt = 5 * ($billamt / 100); ?>
+          	<td width="95">&nbsp;<?php echo $taxamt = 5 * ($billamt / 100); ?> 
+			<span style="color: orange;">৳</span>
             </td>
         </tr>
          
 		<tr>
 		  <th scope="col"><div align="right">Discount &nbsp; </div></th>
-		  <td>&nbsp;$ <?php echo $rsbilling_records['discount']; ?></td>
+		  <td>&nbsp;<?php echo $rsbilling_records['discount']; ?> <span style="color: violet;">৳</span></td>
 	    </tr>
         
 		<tr>
 		  <th scope="col"><div align="right">Grand Total &nbsp; </div></th>
-		  <td>&nbsp;$ <?php echo ($billamt + $taxamt)  - $rsbilling_records['discount'] ; ?></td>
+		  <td>&nbsp;<?php echo ($billamt + $taxamt)  - $rsbilling_records['discount'] ; ?> 
+		  <span style="color: green;">৳</span></td>
 	    </tr>
       </tbody>
     </table>

@@ -81,8 +81,8 @@ if(isset($_GET['delid']))
             {
               echo "<tr>
               <td>&nbsp;$rsprescription_records[medicinename]</td>
-              <td>&nbsp;$rsprescription_records[cost]</td>
-              <td>&nbsp;$rsprescription_records[unit]</td>
+              <td>&nbsp;$rsprescription_records[cost] ৳</td>
+              <td>&nbsp;$rsprescription_records[unit] Pcs</td>
               <td>&nbsp;$rsprescription_records[dosage]</td>
 
               </tr>";

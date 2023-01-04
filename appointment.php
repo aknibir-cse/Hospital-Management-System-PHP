@@ -179,7 +179,7 @@ if(isset($_GET['editid']))
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <textarea rows="4" class="form-control no-resize" name="appreason"
+                                        <textarea rows="4" class="form-control no-resize" placeholder="Appointment Reason" name="appreason"
                                             id="appreason" s><?php echo $rsedit['app_reason']; ?></textarea>
 
 

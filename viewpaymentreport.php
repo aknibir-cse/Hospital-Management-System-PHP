@@ -37,7 +37,8 @@ $rsbilling_records = mysqli_fetch_array($qsqlbilling_records);
           <th scope="col"><div align="right"></div></th>
           <td></td>
           <th scope="col"><div align="right">Bill Amount &nbsp; </div></th>
-          <td><?php
+          <td>
+		<?php
 		$sql ="SELECT * FROM billing_records where billingid='$rsbilling_records[billingid]'";
 		$qsql = mysqli_query($con,$sql);
 		$billamt= 0;
@@ -45,40 +46,42 @@ $rsbilling_records = mysqli_fetch_array($qsqlbilling_records);
 		{
 			$billamt = $billamt +  $rs['bill_amount'];
 		}
-?>
-  &nbsp;$ <?php echo $billamt; ?></td>
+		?> 
+  <?php echo $billamt; ?> <span>৳</span></td>
         </tr>
         <tr>
           <th width="442" scope="col"><div align="right"></div></th>
           <td width="413">&nbsp;</td>
-          <th width="442" scope="col"><div align="right">Tax Amount (5%) &nbsp; </div></th>
-          <td width="413">&nbsp;$ <?php echo $taxamt = 5 * ($billamt / 100); ?></td>
+          <th width="442" scope="col"><div align="right">Tax Amount (5%)</div></th>
+          <td width="413">&nbsp;<?php echo $taxamt = 5 * ($billamt / 100); ?> <span style="color: orange;">৳</span></td>
        	</tr>
          
 		<tr>
 		  <th scope="col"><div align="right">Disount reason</div></th>
 		  <td rowspan="4" valign="top"><?php echo $rsbilling_records['discountreason']; ?></td>
-		  <th scope="col"><div align="right">Discount &nbsp; </div></th>
-		  <td>&nbsp;$ <?php echo $rsbilling_records['discount']; ?></td>
+		  <th scope="col"><div align="right">Discount</div></th>
+		  <td>&nbsp;<?php echo $rsbilling_records['discount']; ?> <span style="color: violet;">৳</span>
+		</td>
 	    </tr>
         
 		<tr>
 		  <th rowspan="3" scope="col">&nbsp;</th>
-		  <th scope="col"><div align="right">Grand Total &nbsp; </div></th>
-		  <td>&nbsp;$ <?php echo $grandtotal = ($billamt + $taxamt)  - $rsbilling_records['discount'] ; ?></td>
+		  <th scope="col"><div align="right">Grand Total</div></th>
+		  <td>&nbsp;<?php echo $grandtotal = ($billamt + $taxamt)  - $rsbilling_records['discount'] ; ?> 
+		  <span>৳</span></td>
 	    </tr>
 		<tr>
 		  <th scope="col"><div align="right">Paid Amount </div></th>
-		  <td>$ <?php
+		  <td><?php
 		  	$sqlpayment ="SELECT sum(paidamount) FROM payment where appointmentid='billappointmentid'";
 			$qsqlpayment = mysqli_query($con,$sqlpayment);
 			$rspayment = mysqli_fetch_array($qsqlpayment);
 			echo $rspayment[0];		  
-		   ?></td>
+		   ?> <span style="color: green;">৳</span></td>
 	    </tr>
 		<tr>
 		  <th scope="col"><div align="right">Balance Amount</div></th>
-		  <td>$ <?php echo $balanceamt = $grandtotal - $rspayment[0]  ; ?></td>
+		  <td><?php echo $balanceamt = $grandtotal - $rspayment[0]  ; ?> <span style="color: blue;">৳</span></td>
 	    </tr>
       </tbody>
     </table>
@@ -107,7 +110,7 @@ else
 			   <tr>
 				 <td>&nbsp;<?php echo $rspayment['paiddate']; ?></td>
 				 <td>&nbsp;<?php echo $rspayment['paidtime']; ?></td>
-				 <td>&nbsp;$ <?php echo $rspayment['paidamount']; ?></td>
+				 <td>&nbsp;<?php echo $rspayment['paidamount']; ?> <span style="color: green;">৳</span></td>
 			   </tr>
 		<?php
 		}
@@ -118,5 +121,4 @@ else
 <?php
 }
 ?>   
-   <p><strong></strong></p>
 </section>

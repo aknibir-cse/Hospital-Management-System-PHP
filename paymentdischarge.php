@@ -64,7 +64,7 @@ $billappointmentid = $_GET['appointmentid'];
               <td><input class="form-control" name="balamt" type="text" id="balamt" value="<?php echo $balanceamt; ?>" readonly onkeyup="calculatepayable()"></td>
             </tr>
             <tr>
-              <td>Discount *</td>
+              <td>Discount amount</td>
               <td><input class="form-control" name="discountamount" type="text" id="discountamount" value="0" onkeyup="calculatepayable()"></td>
             </tr>
             <tr>

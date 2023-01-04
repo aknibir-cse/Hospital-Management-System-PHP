@@ -75,7 +75,7 @@ if(!isset($_SESSION['doctorid']))
           <div class="icon"> <i class="zmdi zmdi-money col-green"></i> </div>
           <div class="content">
             <div class="text">Total Earnings</div>
-            <div class="number">৳ 
+            <div class="number"> 
               <?php 
               $sql = "SELECT sum(bill_amount) as total  FROM `billing_records` WHERE `bill_type` = 'Consultancy Charge'" ;
               $qsql = mysqli_query($con,$sql);
@@ -83,7 +83,7 @@ if(!isset($_SESSION['doctorid']))
               { 
                echo $row['total'];
              }
-              ?>
+              ?> <span style="color: green;">৳</span>
 
             </div>
           </div>
