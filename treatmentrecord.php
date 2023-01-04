@@ -175,7 +175,8 @@ $rspatient=mysqli_fetch_array($qsqlpatient);
         </tr>
 
         <tr>
-          <td colspan="2" align="center"><input class="form-control" type="submit" name="submit" id="submit" value="Submit" /> | <a href='patientreport.php?patientid=<?php echo $_GET['patientid']; ?>&appointmentid=<?php echo $_GET['appid']; ?>'><strong>View Patient Report>></strong></a></td>
+          <td colspan="2" align="center"><input class="form-control" type="submit" name="submit" id="submit" value="Submit" /> | <a href='patientreport.php?patientid=<?php echo $_GET['patientid']; ?>
+		  &appointmentid=<?php echo $_GET['appid']; ?>'><strong>View Patient Report>></strong></a></td>
         </tr>
       </tbody>
     </table>
