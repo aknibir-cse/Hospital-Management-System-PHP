@@ -124,7 +124,7 @@
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
                 data-scrolloffset="0"
-                style="z-index: 8;"><a href="#." class="btn">CONTACT NOW</a> </div>
+                style="z-index: 8;"><a href="contactus.php" class="btn">CONTACT NOW</a> </div>
           </li>
           
           <!-- SLIDE  -->
