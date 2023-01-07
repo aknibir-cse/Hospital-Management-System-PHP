@@ -26,7 +26,13 @@
 <script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
 <script src="assets/bundles/morphingscripts.bundle.js"></script><!-- morphing search page js --> 
 <script src="assets/js/morphing.js"></script><!-- Custom Js -->  
-<script src="sweetalert2.min.js"></script>
+<!--<script src="sweetalert2.min.js"></script>-->
+
+<script src="js/sweetalert/jquery-3.6.3.min.js"></script>
+<script src="js/sweetalert/sweetalert2.all.min.js"></script>
+
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.31.0/sweetalert2.min.js"></script>-->
+
 <script src="assets/js/pages/index.js"></script>
 
 

@@ -1,8 +1,5 @@
 <?php
 session_start();
-?>
-
-<?php
 error_reporting(0);
 include("dbconnection.php");
 $dt = date("Y-m-d");

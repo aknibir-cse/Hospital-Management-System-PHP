@@ -12,7 +12,9 @@ $tim = date("H:i:s");
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <title>HMS</title>
-<link type="icon/x-icon" src="images/favicon.png" >
+
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+
 <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 <!-- JQuery DataTable Css -->
