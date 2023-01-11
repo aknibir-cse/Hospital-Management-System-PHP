@@ -91,7 +91,7 @@ if(isset($_GET['delid']))
 						echo 	" - " . $rstreatment2['treatmenttype'];
 					} 
 
-					echo " </td><td>$ $rs[bill_amount]</td></tr>";
+					echo " </td><td> $rs[bill_amount] ৳</td></tr>";
 					$billamt = $billamt +  $rs['bill_amount'];
 				}
 				?>
